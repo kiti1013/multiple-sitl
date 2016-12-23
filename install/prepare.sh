@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir=`dirname $0`/../
+dir=`pwd`/`dirname $0`/../
 
 #px4
 
