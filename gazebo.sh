@@ -13,6 +13,6 @@ export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:~+/sitl_gazebo/models
 
 export GAZEBO_MASTER_IP
 export GAZEBO_MASTER_URI=$GAZEBO_MASTER_IP:11345
-export GAZEBO_IP
+export GAZEBO_IP=$GAZEBO_MASTER_IP
 
 $GAZEBO --verbose $1 &
