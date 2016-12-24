@@ -13,6 +13,7 @@ ROS Kinetic + mavros support (if needed)
 1. cd mavros/install
 2. sudo ./sudo_deps.sh
 3. ./prepare.sh
+4. relogin
 
 
 Configure
