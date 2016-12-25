@@ -90,6 +90,8 @@ opts[:num].times do |i|
 
   sim_port = mav_port + 9
 
+  bridge_port = mav_port + 2000
+
   cd(sitl_base_path) {
     model_name="#{model}#{m_num}"
     mkdir_p model_name
@@ -138,7 +140,7 @@ opts[:num].times do |i|
 
   cd(mavros_dir) {
     sleep 1
-    system("./roslaunch_num.sh", "#{m_num}", "#{mav_oport2}", "#{mav_port2}")
+    system("./roslaunch_num.sh", "#{m_num}", "#{mav_oport2}", "#{mav_port2}", "#{bridge_port}")
   }
 end
 
