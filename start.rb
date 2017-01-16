@@ -14,7 +14,7 @@ wrk_dir = __dir__ + '/'
 
 #options
 all_model_names = ["iris", "iris_opt_flow"]
-opts = { model: "iris", num: 1 }
+opts = { model: "iris", num: 1, rate: 10000 }
 
 op = OptionParser.new do |op|
   op.banner = "Usage: #{__FILE__} [options] [world_file]"
@@ -25,6 +25,10 @@ op = OptionParser.new do |op|
 
   op.on("-n NUM", Integer, "number of instances") do |n|
     opts[:num] = n
+  end
+
+  op.on("-r RATE", Integer, "px4 data rate") do |r|
+    opts[:rate] = r
   end
 
   op.on("-h", "help") do
@@ -114,6 +118,8 @@ opts[:num].times do |i|
         rc.sub!(/.*OPTICAL_FLOW_RAD.*\n/,'') if model=="iris"
 
         rc.sub!(/simulator start -s.*$/,"simulator start -s -u #{sim_port}")
+
+        rc.gsub!("-r 4000000","-r #{opts[:rate]}")
 
         rc.gsub!("-u 14556","-u #{mav_port}")
         rc.sub!("mavlink start -u #{mav_port}","mavlink start -u #{mav_port} -o #{mav_oport}")
