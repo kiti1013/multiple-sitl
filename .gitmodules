@@ -1,8 +1,0 @@
-[submodule "Firmware"]
-	path = Firmware
-	url = https://github.com/acsl-mipt/Firmware
-	branch = master
-[submodule "sitl_gazebo"]
-	path = sitl_gazebo
-	url = https://github.com/acsl-mipt/sitl_gazebo
-	branch = master
