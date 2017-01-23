@@ -62,7 +62,7 @@ model = opts[:model]
 #Firmware
 px4_fname="px4"
 px4_dir="Firmware/build_posix_sitl_default/src/firmware/posix/"
-rc_script="Firmware/posix-configs/SITL/init/rcS_gazebo_#{model}"
+rc_script="Firmware/posix-configs/SITL/init/ekf2/#{model}"
 
 #sitl_gazebo
 model_path = "sitl_gazebo/models/#{model}/#{model}.sdf"
@@ -113,7 +113,7 @@ opts[:num].times do |i|
         #generate rc file
         rc1 ||= File.read(wrk_dir + rc_script)
         rc = rc1.sub('param set MAV_TYPE',"param set MAV_SYS_ID #{m_num}\nparam set MAV_TYPE")
-        rc.sub!('../../../../ROMFS/px4fmu_common/mixers/','')
+        rc.sub!('ROMFS/px4fmu_common/mixers/','')
         rc.sub!(/sdlog2 start.*\n/,'')
         rc.sub!(/.*OPTICAL_FLOW_RAD.*\n/,'') if model=="iris"
 
