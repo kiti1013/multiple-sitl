@@ -3,7 +3,7 @@
 dir=`pwd`/`dirname $0`/../
 
 cd $dir
-git submodule update --init --remote --depth 1
+git submodule update --init --remote
 
 #px4
 
