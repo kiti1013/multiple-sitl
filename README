@@ -3,7 +3,7 @@ Project to run multiple px4 SITL with Gazebo on Ubuntu 16.04 (Xenial).
 Install
 -------
 
-0. git submodule update --init --remote --depth 1
+0. git submodule update --init --remote
 
 1. cd install
 2. sudo ./sudo_deps.sh
