@@ -20,7 +20,7 @@ if grep -Fxq "$exportline" ~/.profile; then echo nothing to do ; else echo $expo
 . ~/.profile
 apt-get install libc6:i386 libgcc1:i386 libstdc++5:i386 libstdc++6:i386
 apt-get install gcc-4.6-base:i386
-
+#update ruby 
 add-apt-repository ppa:brightbox/ruby-ng
 apt-get update
 apt-get install ruby2.3
