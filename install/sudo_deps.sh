@@ -6,7 +6,7 @@ wget http://packages.osrfoundation.org/gazebo.key -O - | apt-key add -
 apt-get update
 
 #gazebo
-apt-get install gazebo7 libgazebo7-dev -y
+apt-get install ros-indigo-gazebo7-ros ros-indigo-gazebo7-plugins -y
 
 #sitl_gazebo
 apt-get install libopencv-dev libeigen3-dev protobuf-compiler libprotobuf-dev libprotoc-dev -y
