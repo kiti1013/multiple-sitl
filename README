@@ -1,13 +1,15 @@
-Project to run multiple px4 SITL with Gazebo on Ubuntu 16.04 (Xenial).
+Project to run multiple px4 SITL with Gazebo on Ubuntu 14.04 .
 
 Install
 -------
+1.sudo./install 
+2. relogin
 
 1. cd install
 2. sudo ./sudo_deps.sh
 3. ./prepare.sh
 
-ROS Kinetic + mavros support (if needed)
+ROS indigo + mavros support (if needed)
 1. cd mavros/install
 2. sudo ./sudo_deps.sh
 3. ./prepare.sh
