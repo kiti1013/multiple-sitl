@@ -2,7 +2,7 @@ Project to run multiple px4 SITL with Gazebo on Ubuntu 14.04 .
 
 Install
 -------
-1.sudo./install 
+1.sudo./install.sh 
 2. relogin
 
 1. cd install
