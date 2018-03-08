@@ -31,8 +31,8 @@ some help:
 one SITL instance, using iris model:
  ./start.rb
 
-three iris_opt_flow models on x line:
- ./start.rb -m iris_opt_flow -n 3
+three iris models on x line:
+ ./start.rb -m iris -n 3
 
 work with custom world:
  cp default.world custom.world
